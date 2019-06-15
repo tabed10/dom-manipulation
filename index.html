@@ -2,48 +2,53 @@
 <html>
   <head>
     <title>DOM Manipulation Exercises</title>
-    <script src="script.js"></script>
   </head>
   <body>
 
     <h2 id="heading">DOM Manipulation Exercises</h3>
-    
     <h4>Task 2 a</h4>
-    <button id="btn" >Click me!</button> 
-    <div id="task2a" ></div>
+    <button  id= "addText1">
+      Add text
+    </button>
+    <div id="task2a"></div>
 
     <h4>Task 2 b</h4>
-    <input type="button" value="Red">
-    <style>
-    input[type=button] {
-      width: 10%;
-      background-color: rgb(228, 0, 0);
-      color: white;
-      padding: 14px 20px;
-      margin: 8px 0;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    </style>
-    
-    <button id="btnGreen" >Green!</button>
+    <button onClick="changeBGColor(event)">RED</button>
+    <button onClick="changeBGColor(event)">GREEN</button>
+    <button onClick="changeBGColor(event)">WHITE</button>
+
 
     <h4>Task 2 c</h4>
+    <button onClick="redirectToGoogle(event)">Google</button>
 
 
     <!-- ***** -->
     <h3>With jQuery</h3>
     <h4>Task 4 a</h4>
+    <button  id= "addText2">
+      Add text
+    </button>
     <div id="task4a"></div>
 
     <h4>Task 4 b</h4>
+    <button onClick="changeBG(event)">RED</button>
+    <button onClick="changeBG(event)">GREEN</button>
 
 
     <h4>Task 4 c</h4>
+    <input type="number" id="num1" placeholder="Number">
+    <input type="number" id="num2" placeholder="Number">
+    <button id="add">ADD</button>
+    <br>
+    The sum is <span id="sum"></span>
+    
+
 
 
     <!-- Insert your JavaScript file -->
+    <script src="jquery-3.3.1.min.js">
+      </script>
+      <script src="script.js"></script>
 
   </body>
 </html>

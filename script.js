@@ -1,13 +1,48 @@
 /* Task 1 */
-Element = document.title
-console.log(Element)
+
+var heading = document.getElementById('heading')
+console.log(heading.innerText)
+heading.innerText= "This is new"
+
 
 /* Task 2 using plain JavaScript */
-function addTxt(){
-    var el1 = document.getElementById("task2a")
-    el1.innerHTML = "Hello World"
+//Task 2a
+var textBtn = document.getElementById('addText1')
+textBtn.addEventListener('click', function(event){
+    var task2 = document.getElementById('task2a')
+    var paragraph = document.createElement('p')
+    paragraph.innerText = "Hello World"
+    task2.appendChild(paragraph)
+})
+
+//Task 2b
+function changeBGColor(event){
+    //console.log(event.target.innerText)
+    var body = document.getElementsByTagName('body')[0]
+    body.style.backgroundColor = event.target.innerText.toLowerCase()
 }
-var el2 = document.getElementById("btn") 
-el2.addEventListener("click",addTxt)
+
+// Task 2c
+function redirectToGoogle(event){
+    window.location.assign("https://www.google.com/")
+} 
+
 
 /* Task 4 using jQuery */
+
+//Task- 4a
+$('#addText2').click(function(event){
+   // console.log("clicked")
+    var paragraph= $('<p>').text('Hello World')
+    $('#task4a').append(paragraph)
+})
+//Task- 4b
+function changeBG(event){
+    var color= event.target.innerText.toLowerCase()
+    $('body').css('background-color', color)
+}
+//Task- 4c
+$('#add').click(function(event){
+    var sum = Number($('#num1').val())+ Number($('#num2').val())
+    $('#sum').text(sum)
+})
